@@ -1,0 +1,10 @@
+a = float(input("Birinci reqem: "))
+b = float(input("ikinci reqem: "))
+toplama = a + b
+cixma = a - b
+vurma = a * b
+bolme = a / b
+print("Toplama neticesi: ", toplama)
+print("Cixma neticesi: ", cixma)
+print("Vurma neticesi: ", vurma)
+print("Bolme neticesi: ", bolme)
