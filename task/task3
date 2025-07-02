@@ -1,0 +1,5 @@
+reqem1 =1
+reqem2 =50
+while reqem1<reqem2:
+    print(reqem1, "")
+    reqem1+=1
