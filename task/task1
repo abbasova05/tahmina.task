@@ -1,0 +1,8 @@
+class Isci:
+    def __init__(self, ad, soyad, yas):
+        self.ad = ad
+        self.soyad = soyad
+        self.yas = yas
+
+isci1 = Isci("Tahmina", "Abbasova", 20)
+print("Icsi1:", isci1.ad, isci1.soyad, isci1.yas)     
