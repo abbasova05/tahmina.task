@@ -1,0 +1,18 @@
+class Masin:
+    def __init__(self, model, reng, il):
+        self.model = model
+        self.reng = reng
+        self.il = il
+        
+    def get_model(self):
+        return self.model
+        
+    def get_reng(self):
+        return self.reng
+        
+    def get_il(self):
+        print("getter method")
+        return self.il
+        
+masin1 = Masin("Audi", "Qara", 2020)
+print(masin1.get_model(), masin1.get_reng(), masin1.get_il())
