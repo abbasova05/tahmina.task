@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ay Seçici</title>
+</head>
+<body>
+    <h1>Ay və İl Seçin</h1>
+    <form method="POST">
+        <label for="month">Ay və ili seçin:</label><br>
+        <input type="month" id="month" name="month" value="{{ selected_month or '' }}" required>
+        <input type="date" id="date" name="date"
+        <br><br>
+        <button type="submit">Göndər</button>
+    </form>
+
+    {% if selected_month %}
+        <p>Seçilmiş ay və il: <strong>{{ selected_month }}</strong></p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Qeydlər</title>
+</head>
+<body>
+    <h2>Qeyd Əlavə Et</h2>
+    <form method="POST">
+        Ad: <input name="ad"><br><br>
+        Qeyd: <br><textarea name="qeyd" rows="4" cols="40"></textarea><br><br>
+        <input type="submit" value="Yadda Saxla">
+    </form>
+    <p style="color:green;">{{ mesaj }}</p>
+    <hr>
+    <h3>Bütün Qeydlər:</h3>
+    {% for ad, qeyd, vaxt in qeydlər %}
+        <b>{{ ad }}</b> ({{ vaxt }})<br>{{ qeyd }}<hr>
+    {% endfor %}
+</body>
+</html>

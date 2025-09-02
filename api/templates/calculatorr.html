@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sadə Kalkulyator</title>
+</head>
+<body>
+    <h1>Kalkulyator</h1>
+    <form method="POST">
+        1-ci ədəd: <input type="text" name="num1" required>
+        <br><br>
+        2-ci ədəd: <input type="text" name="num2" required>
+        <br><br>
+        Əməliyyat seçin:
+        <select name="operation" required>
+            <option value="">--Seçin--</option>
+            <option value="add">Toplama (+)</option>
+            <option value="subtract">Çıxma (-)</option>
+            <option value="multiply">Vurma (×)</option>
+            <option value="divide">Bölmə (÷)</option>
+        </select>
+        <br><br>
+        <button type="submit">Hesabla</button>
+    </form>
+
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if result is not none %}
+        <h2>Nəticə: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sadə Kalkulyator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f2f2f2;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        input[type="text"], select {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p.error {
+            color: red;
+            font-weight: bold;
+        }
+        h2.result {
+            color: green;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kalkulyator</h1>
+    <form method="POST">
+        1-ci ədəd:
+        <input type="text" name="num1" required>
+
+        2-ci ədəd:
+        <input type="text" name="num2" required>
+
+        Əməliyyat seçin:
+        <select name="operation" required>
+            <option value="">--Seçin--</option>
+            <option value="add">Toplama (+)</option>
+            <option value="subtract">Çıxma (-)</option>
+            <option value="multiply">Vurma (×)</option>
+            <option value="divide">Bölmə (÷)</option>
+        </select>
+
+        <button type="submit">Hesabla</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if result is not none %}
+        <h2 class="result">Nəticə: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>

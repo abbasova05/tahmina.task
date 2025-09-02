@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+<head>
+    <title>İstifadəçi əlavə et</title>
+</head>
+<body>
+    <h1>İstifadəçi əlavə et (Form)</h1>
+    <form action="{{ url_for('submit') }}" method="post">
+        <input type="text" name="name" placeholder="Adınız" required><br><br>
+        <input type="email" name="email" placeholder="Emailiniz" required><br><br>
+        <button type="submit">Göndər</button>
+    </form>
+
+    <hr>
+    <a href="{{ url_for('list_users') }}">İstifadəçilərin siyahısı</a>
+</body>
+</html>

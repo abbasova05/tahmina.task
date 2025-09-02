@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Qeydiyyat Sistemi</title>
+</head>
+<body>
+    <h2>Qeydiyyat Formu</h2>
+    {% if mesaj %}
+        <p style="color: red;">{{ mesaj }}</p>
+    {% endif %}
+    {% if ugurlu %}
+        <p style="color: green;">{{ ugurlu }}</p>
+    {% endif %}
+    <form method="POST">
+        <label>İstifadəçi adı:</label><br>
+        <input type="text" name="username" value="{{ request.form.username or '' }}"><br><br>
+        
+        <label>Parol:</label><br>
+        <input type="password" name="password"><br><br>
+        
+        <label>Email:</label><br>
+        <input type="text" name="email" value="{{ request.form.email or '' }}"><br><br>
+        
+        <input type="submit" value="Qeydiyyat">
+    </form>
+</body>
+</html>

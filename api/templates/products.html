@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Məhsullar</title>
+</head>
+<body>
+    <h1>Məhsullar Siyahısı</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - {{ product.price }} AZN</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

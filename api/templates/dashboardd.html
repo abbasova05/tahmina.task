@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h2> Xoş gəldin, {{ user }}!</h2>
+
+    <hr>
+    <h3>Şəxsi Panel</h3>
+    <p>Burada öz adını və ya şifrəni dəyişə bilərsən:</p>
+
+    <form method="post">
+        <label>Yeni ad:</label>
+        <input type="text" name="new_ad" placeholder="Yeni istifadəçi adı"><br><br>
+
+        <label>Yeni şifrə:</label>
+        <input type="password" name="new_sifre" placeholder="Yeni şifrə"><br><br>
+
+        <input type="submit" value="Dəyişiklik et">
+    </form>
+
+    <p><a href="/login">Çıxış et</a></p>
+</body>
+</html>

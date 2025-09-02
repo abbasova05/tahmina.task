@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox nümunəsi</title>
+</head>
+<body>
+    <h1>Sevdiyiniz rəngləri seçin</h1>
+    <form method="POST">
+        <input type="checkbox" id="red" name="colors" value="Qırmızı"
+            {% if "Qırmızı" in selected %}checked{% endif %}>
+        <label for="red">Qırmızı</label><br>
+
+        <input type="checkbox" id="green" name="colors" value="Yaşıl"
+            {% if "Yaşıl" in selected %}checked{% endif %}>
+        <label for="green">Yaşıl</label><br>
+
+        <input type="checkbox" id="blue" name="colors" value="Mavi"
+            {% if "Mavi" in selected %}checked{% endif %}>
+        <label for="blue">Mavi</label><br>
+
+        <button type="submit">Göndər</button>
+    </form>
+
+    {% if selected %}
+        <h2>Seçilmiş rənglər:</h2>
+        <ul>
+            {% for color in selected %}
+                <li>{{ color }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Heç bir rəng seçilməyib.</p>
+    {% endif %}
+</body>
+</html>

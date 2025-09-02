@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <title>İstifadəçilər Siyahısı</title>
+</head>
+<body>
+    <h1>İstifadəçilər</h1>
+    <ul>
+        {% for user in users %}
+        <li>{{ user.id }} - {{ user.name }} ({{ user.email }})</li>
+        {% else %}
+        <li>Heç bir istifadəçi yoxdur.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
+
