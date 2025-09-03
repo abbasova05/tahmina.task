@@ -3,11 +3,10 @@ import csv
 import os
 
 app = Flask(__name__)
-app.secret_key = 'supersecretkey123'  # Flash mesajlar üçün gizli açar
+app.secret_key = 'supersecretkey123'  
 
 CSV_FILE = 'users.csv'
 
-# CSV faylı yoxdursa yaradılır
 if not os.path.exists(CSV_FILE):
     with open(CSV_FILE, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
@@ -89,7 +88,6 @@ def update():
         users = read_users()
         user_found = False
 
-        # Yenisinin duplicate olub-olmadığını yoxlamaq
         if new_username and any(user['username'] == new_username for user in users):
             flash('Yeni istifadəçi adı artıq mövcuddur', 'error')
             return redirect(url_for('update'))
