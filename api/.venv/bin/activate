@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/10962@holbertonstudents.com/holbertonschool-higher_level_programming-2/restful-api/.venv"
+VIRTUAL_ENV="/home/10962@holbertonstudents.com/tahmina.task-4/api/.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
